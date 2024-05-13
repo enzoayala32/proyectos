@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Mi Portfolio</title>
+  </head>
+  <body>
+    <!-- seccion inicio  -->
+    <section id="inicio">
+      <div class="contenido">
+        <header>
+          <div class="contenido-header">
+            <h1>Dev</h1>
+            <nav id="nav" class="">
+              <ul id="links">
+                <li>
+                  <a
+                    href="#inicio"
+                    class="seleccionado"
+                    onclick="seleccionar(this)"
+                    >INICIO</a
+                  >
+                </li>
+                <li>
+                  <a href="#sobremi" onclick="seleccionar(this)">SOBRE MI</a>
+                </li>
+                <li>
+                  <a href="#servicios" onclick="seleccionar(this)">SERVICIOS</a>
+                </li>
+                <li>
+                  <a href="#portfolio" onclick="seleccionar(this)">PORTFOLIO</a>
+                </li>
+                <li>
+                  <a href="#contacto" onclick="seleccionar(this)">CONTACTO</a>
+                </li>
+              </ul>
+            </nav>
+
+            <!-- Icono del menu responsive -->
+            <div id="icono-nav" onclick="responsiveMenu()">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+            <!-- iconos de las redes sociales -->
+            <div class="redes">
+              <!-- github  -->
+              <a href="https://github.com/enzoayala32"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <!-- facebook -->
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <!-- instagram -->
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+        </header>
+        <div class="presentacion">
+          <p class="bienvenida">Bienvenidos</p>
+          <h2>Soy <span>Enzo Ayala</span>, Desarrollador Web</h2>
+          <p class="descripcion">
+            ademas de tener hablidades tecnicas solidas,soy alguien que esta
+            constantemente actualizado en las ultimas tendencias en diseño web y
+            esta comprometido con la creacion de experiencias digitales
+            excepcionales para los usuarios
+          </p>
+          <a href="#portfolio">Ir a Portafolio</a>
+        </div>
+      </div>
+    </section>
+    <!-- seccion sobre mi -->
+    <section id="sobremi">
+      <div class="contenedor-foto">
+        <img src="media/mi foto.jpg" alt="mi foto" />
+      </div>
+      <div class="sobremi">
+        <p class="titulo-seccion">Sobre Mi</p>
+        <h2>Hola soy <span>Enzo Ayala</span></h2>
+        <h3>Desarrollador Web</h3>
+        <p>
+          como Desarrollador web front-end soy alguien que se especializa en la
+          creacion de sitios web y aplicaciones que se ven y se sientes geniales
+          para los usuarios. Utilizo lenguajes de programacion como Html, Css y
+          Javascript para dar vida a los diseños y crear interacciones que los
+          usuarios pueden experimentar directamente en su navegador web
+        </p>
+      </div>
+    </section>
+    <!-- seccion habilidades -->
+    <div class="contenedor-skills" id="skills">
+      <h3>HABILIDADES</h3>
+      <div class="skills">
+        <div class="info">
+          <p><span class="lista"></span>Html Y Css</p>
+          <span class="porcentaje">95%</span>
+        </div>
+        <div class="barra">
+          <div id="html" class=""></div>
+        </div>
+      </div>
+
+      <div class="skills">
+        <div class="info">
+          <p><span class="lista"></span>Javascript</p>
+          <span class="porcentaje">90%</span>
+        </div>
+        <div class="barra">
+          <div id="js" class=""></div>
+        </div>
+      </div>
+
+      <div class="skills">
+        <div class="info">
+          <p><span class="lista"></span>bootstrap</p>
+          <span class="porcentaje">85%</span>
+        </div>
+        <div class="barra">
+          <div id="bd" class=""></div>
+        </div>
+      </div>
+    </div>
+    <!-- SECCION PORTAFOLIO -->
+    <section id="portfolio">
+      <h3 class="titulo-seccion">Mis Proyectos</h3>
+      <div class="fila">
+        <div class="proyecto">
+          <div class="overlay"></div>
+          <img src="media/bootstrap1.png" alt="" />
+          <div class="info">
+            <h4>bootstrap</h4>
+            <p>Diseño Web</p>
+            <a href="pags/bootstrap/index.html">ver pagina</a>
+          </div>
+        </div>
+        <div class="proyecto">
+          <div class="overlay"></div>
+          <img src="media/proyecto2.jpg" alt="" />
+          <div class="info">
+            <h4>lintree</h4>
+            <p>Diseño Web</p>
+            <a href="pags/linktree/index.html">ver pagina</a>
+          </div>
+        </div>
+        <div class="proyecto">
+          <div class="overlay"></div>
+          <img src="media/proyecto3.png" alt="" />
+          <div class="info">
+            <h4>tarjeta</h4>
+            <p>Diseño Web</p>
+            <a href="pags/tarjeta/index.html">ver pagina</a>
+          </div>
+        </div>
+      </div>
+      <div class="fila">
+        <div class="proyecto">
+          <div class="overlay"></div>
+          <img src="media/pokemon.png" alt="" />
+          <div class="info">
+            <h4>pokemon</h4>
+            <p>Diseño Web</p>
+            <a href="pags/imagenes apiladas/">ver pagina</a>
+          </div>
+        </div>
+        <div class="proyecto">
+          <div class="overlay"></div>
+          <img src="media/proyecto1.png" alt="" />
+          <div class="info">
+            <h4>bootstrap</h4>
+            <p>Diseño Web</p>
+            <a href="pags/bootstrap1/index.html">ver pagina</a>
+          </div>
+        </div>
+        <div class="proyecto">
+          <div class="overlay"></div>
+          <img src="media/menu basico.png" alt="" />
+          <div class="info">
+            <h4>menu basico</h4>
+            <p>Diseño Web</p>
+            <a href="pags/menu basico/index.html"></a>
+          </div>
+        </div>
+      </div>
+      <div class="fila">
+        <div class="proyecto">
+          <div class="overlay"></div>
+          <img src="media/javascript.png" alt="" />
+          <div class="info">
+            <h4>javascript intermedio</h4>
+            <p>logica de programacion</p>
+            <a href="pags/js intermedio/index.html">ver pagina</a>
+          </div>
+        </div>
+        <div class="proyecto">
+          <div class="overlay"></div>
+          <img src="media/javascript.png" alt="" />
+          <div class="info">
+            <h4>javascript avanzado</h4>
+            <p>logica de programacion</p>
+            <a href="pags/js avanzado/index.html">ver pagina</a>
+          </div>
+        </div>
+        <div class="proyecto">
+          <div class="overlay"></div>
+          <img src="media/javascript.png" alt="" />
+          <div class="info">
+            <h4>proyecto javascript</h4>
+            <p>logica de programacion</p>
+            <a href="pags/actividad en clase/index.html">ver pagina</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCTION C O N T A C T O -->
+    <section id="contacto">
+      <h3 class="titulo-seccion">Contactame ahora</h3>
+      <div class="contenedor-form">
+        <form action="">
+          <div class="fila mitad">
+            <input
+              type="text"
+              placeholder="Nombre Completo *"
+              class="input-mitad"
+            />
+            <input
+              type="email"
+              placeholder="Dirección de Email"
+              class="input-mitad"
+            />
+          </div>
+          <div class="fila">
+            <input type="text" placeholder="Tema..." class="input-full" />
+          </div>
+          <div class="fila">
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Tu Mensaje..."
+              class="input-full"
+            ></textarea>
+          </div>
+
+          <input type="submit" value="Enviar Mensaje" class="btn-enviar" />
+        </form>
+      </div>
+    </section>
+
+    <!-- SECCION FOOTER -->
+    <footer>
+      <p>Todos los derechos reservados - 2022</p>
+      <div class="redes">
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
