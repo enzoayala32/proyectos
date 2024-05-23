@@ -90,7 +90,7 @@
 //formulario de pesos a dolares y viceversa
 const botonPesos = document.getElementById("convertir-pesos");
 botonPesos.addEventListener("click", function () {
-  const dolares = document.getElementById("dolares-pesos").ariaValueMax;
+  const dolares = document.getElementById("dolares-pesos").value;
   const pesos = dolares * 380;
   document.getElementById("pesos-pesos").value = pesos;
 });
@@ -98,6 +98,6 @@ botonPesos.addEventListener("click", function () {
 const botonDolares = document.getElementById("convertir-dolares");
 botonDolares.addEventListener("click", function () {
   const pesos = document.getElementById("pesos-dolares").value;
-  constdolares = pesos / 300;
+  const dolares = pesos / 300;
   document.getElementById("dolares-dolares").value = dolares;
 });
