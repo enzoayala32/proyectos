@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#textoACopiar {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+button {
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+}
+
+button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 3px 2px rgba(0, 123, 255, 0.5);
+}
+
+@media (min-width: 600px) {
+    #container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    #textoACopiar {
+        margin-right: 20px;
+        margin-bottom: 0; /* Ajustar margen para diseño en pantalla grande */
+    }
+}
