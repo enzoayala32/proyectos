@@ -31,8 +31,12 @@ export function Kanban(){
                 <Droppable key={section.id} droppableId={section.id}>
                     {
                         (provided)=>(
-                            <div>
-                                {...provided.droppableProps}
+                            <div {...provided.droppableProps} className="kanban__section"
+                            ref={provided.innerRef}>
+                                <div className="kanban__section__title"> 
+                                    {section.title}
+                                </div>
+                                
                             </div>
                         )
                     }
