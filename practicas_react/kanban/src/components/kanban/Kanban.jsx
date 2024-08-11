@@ -2,32 +2,37 @@ import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import mockData from "../../mockData";
 import { Card } from "../card/Card";
 import { useState } from "react";
-import "./kanban.scss"
+import "./kanban.scss";
+
 export function Kanban() {
   const [data, setData] = useState(mockData);
+
   const onDragEnd = (result) => {
     if (!result.destination) return;
     const { source, destination } = result;
+
     if (source.droppableId !== destination.droppableId) {
       const sourceColIndex = data.findIndex((e) => e.id === source.droppableId);
       const destinationColIndex = data.findIndex(
         (e) => e.id === destination.droppableId
       );
+
       const sourceCol = data[sourceColIndex];
       const destinationCol = data[destinationColIndex];
 
-      const sourceTask = [...sourceCol.tasks];
-      const destinationTask = [...destinationCol.task];
+      const sourceTask = [...sourceCol.tasks];  
+      const destinationTask = [...destinationCol.tasks];  
 
-      const [remove] = sourceTask.splice(source.index, 1);
-      destinationTask.splice(destination.index, 0, remove);
+      const [removed] = sourceTask.splice(source.index, 1);  
+      destinationTask.splice(destination.index, 0, removed);
 
-      data[sourceColIndex].task = sourceTask;
-      data[destinationColIndex].task = destinationTask;
+      data[sourceColIndex].tasks = sourceTask;  
+      data[destinationColIndex].tasks = destinationTask;  
 
       setData(data);
     }
   };
+
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <div className="kanban">
@@ -41,7 +46,7 @@ export function Kanban() {
               >
                 <div className="kanban__section__title">{section.title}</div>
                 <div className="kanban__section__content">
-                  {section.tasks.map((task, index) => (
+                  {section.tasks.map((task, index) => (  
                     <Draggable
                       key={task.id}
                       draggableId={task.id}
@@ -62,6 +67,7 @@ export function Kanban() {
                       )}
                     </Draggable>
                   ))}
+                  {provided.placeholder}  
                 </div>
               </div>
             )}
