@@ -15,7 +15,7 @@ const mockData = [
         },
         {
             id:uuidv4(),
-            title:"estudiar react"
+            title:"estudiar html"
         },
     ]
   },
@@ -25,15 +25,15 @@ const mockData = [
     tasks:[
         {
             id:uuidv4(),
-            title:"estudiar javascript"
+            title:"estudiar BBDD"
         },
         {
             id:uuidv4(),
-            title:"estudiar react"
+            title:"estudiar firebase"
         },
         {
             id:uuidv4(),
-            title:"estudiar react"
+            title:"estudiar angular"
         },
     ]
     },
@@ -43,7 +43,7 @@ const mockData = [
         tasks:[
             {
                 id:uuidv4(),
-                title:"estudiar javascript"
+                title:"hacer proyecto con drag and drop"
             },
         ]
         },
